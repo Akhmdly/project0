@@ -3,10 +3,10 @@ async function fetchBookDetails() {
     const urlParams = new URLSearchParams(queryString);
     const title = urlParams.get('title') || 'No book name';
     const authors = urlParams.get('authors') || 'Author unknown';
-    const description = urlParams.get('description') || 'No description';
-    const category = urlParams.get('category') || 'Kategori Yok';
-    const pageNum = urlParams.get('pageNum') || 'Sayfa Sayısı Bilinmiyor';
-    const language = urlParams.get('language') || 'Dil Bilinmiyor';
+    const description = urlParams.get('description') || '';
+    const category = urlParams.get('category') || '';
+    const pageNum = urlParams.get('pageNum') || '';
+    const language = urlParams.get('language') || '';
     const thumbnail = urlParams.get('thumbnail') || '';
 
     const imageUrls = await fetchBookImages(title);
